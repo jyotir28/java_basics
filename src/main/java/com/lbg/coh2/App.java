@@ -1,24 +1,21 @@
 package com.lbg.coh2;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
 /**
  * Hello world!
  *
  */
 public class App 
 {	
-	int x=1;
-    public static void main( String[] args )
+    public static void main( String[] args ) throws IOException
     {
-        System.out.println( "Hello World!" );
-        int y = 4;	// decl with assignment 
-        App obj = new App();
-        int x = 88;
-        System.out.println( obj.x );
-        System.out.println(x);
-        System.out.println(obj.check(44, 45));
-    }
-    
-     int check(int a,int b) {
-    	return a+b;
+       System.out.print("Enter a message: ");
+       
+       BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+       String dataRead = br.readLine();
+       System.out.println("=> " + dataRead);
     }
 }
